@@ -12,7 +12,7 @@
 
 %define		_rel	0.1
 Summary:	usb-rdnis-lite
-Name:		kernel%{_alt_kernel}-usb-rndis-lite
+Name:		kernel%{_alt_kernel}-misc-usb-rndis-lite
 Version:	0
 Release:	%{_rel}@%{_kernel_ver_str}
 License:	GPL v2
@@ -37,7 +37,7 @@ This package contains the Linux drivers for:
 - USB network driver framework
 - USB CDC Ethernet devices
 
-%package -n kernel%{_alt_kernel}-smp-usb-rndis-lite
+%package -n kernel%{_alt_kernel}-smp-misc-usb-rndis-lite
 Summary:	usb-rdnis-lite
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Base/Kernel
@@ -47,7 +47,7 @@ Requires(post,postun):	/sbin/depmod
 Requires(postun):	%releq_kernel_smp
 %endif
 
-%description -n kernel%{_alt_kernel}-smp-usb-rndis-lite
+%description -n kernel%{_alt_kernel}-smp-misc-usb-rndis-lite
 This package contains the Linux SMP drivers for:
 - USB Host side RNDIS driver
 - USB network driver framework
@@ -77,10 +77,10 @@ rm -rf $RPM_BUILD_ROOT
 %postun
 %depmod %{_kernel_ver}
 
-%post	-n kernel%{_alt_kernel}-smp-usb-rndis-lite
+%post	-n kernel%{_alt_kernel}-smp-misc-usb-rndis-lite
 %depmod %{_kernel_ver}smp
 
-%postun -n kernel%{_alt_kernel}-smp-usb-rndis-lite
+%postun -n kernel%{_alt_kernel}-smp-misc-usb-rndis-lite
 %depmod %{_kernel_ver}smp
 
 %files
@@ -88,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 /lib/modules/%{_kernel_ver}/misc/*
 
 %if %{with smp} && %{with dist_kernel}
-%files -n kernel%{_alt_kernel}-smp-usb-rndis-lite
+%files -n kernel%{_alt_kernel}-smp-misc-usb-rndis-lite
 %defattr(644,root,root,755)
 /lib/modules/%{_kernel_ver}smp/misc/*
 %endif
