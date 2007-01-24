@@ -32,7 +32,10 @@ Requires(postun):	%releq_kernel_up
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This package contains the Linux driver for usb-rdnis-lite
+This package contains the Linux drivers for:
+- USB Host side RNDIS driver
+- USB network driver framework
+- USB CDC Ethernet devices
 
 %package -n kernel%{_alt_kernel}-smp-usb-rndis-lite
 Summary:	usb-rdnis-lite
@@ -45,7 +48,10 @@ Requires(postun):	%releq_kernel_smp
 %endif
 
 %description -n kernel%{_alt_kernel}-smp-usb-rndis-lite
-This package contains the Linux SMP driver for usb-rdnis-lite
+This package contains the Linux SMP drivers for:
+- USB Host side RNDIS driver
+- USB network driver framework
+- USB CDC Ethernet devices
 
 %prep
 %setup -q -n usb-rndis-lite
