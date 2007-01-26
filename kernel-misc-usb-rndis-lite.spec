@@ -10,7 +10,7 @@
 %undefine	with_dist_kernel
 %endif
 
-%define		_rel	0.6
+%define		_rel	0.7
 Summary:	usb-rdnis-lite
 Name:		kernel%{_alt_kernel}-misc-usb-rndis-lite
 Version:	0
@@ -56,13 +56,10 @@ This package contains the Linux SMP drivers for:
 %prep
 %setup -q -n usb-rndis-lite
 
-%if 0%{?debug:1}
-%{__sed} -i -e 's,^.*\(#define.*\(DEBUG\|VERBOSE\)\),\1,' cdc_ether.c
-%endif
-
 %build
 %if %{with kernel}
-%build_kernel_modules -m cdc_ether,rndis_host,usbnet
+%build_kernel_modules -m cdc_ether,rndis_host,usbnet \
+	EXTRA_CFLAGS="%{?debug:-DDEBUG=1 -DVERBOSE=1}"
 %endif
 
 %install
