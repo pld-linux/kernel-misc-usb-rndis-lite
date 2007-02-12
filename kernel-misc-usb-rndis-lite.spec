@@ -12,7 +12,7 @@
 
 %define		_rel	0.7
 Summary:	Linux kernel drivers for USB RNDIS
-Summary(pl.UTF-8):   Sterowniki jądra Linuksa do USB RNDIS
+Summary(pl.UTF-8):	Sterowniki jądra Linuksa do USB RNDIS
 Name:		kernel%{_alt_kernel}-misc-usb-rndis-lite
 Version:	0
 Release:	%{_rel}@%{_kernel_ver_str}
@@ -46,7 +46,7 @@ Ten pakiet zawiera sterowniki jądra Linuksa do:
 
 %package -n kernel%{_alt_kernel}-smp-misc-usb-rndis-lite
 Summary:	Linux SMP drivers for RNDIS
-Summary(pl.UTF-8):   Sterowniki jądra Linuksa SMP do USB RNDIS
+Summary(pl.UTF-8):	Sterowniki jądra Linuksa SMP do USB RNDIS
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Base/Kernel
 Requires(post,postun):	/sbin/depmod
