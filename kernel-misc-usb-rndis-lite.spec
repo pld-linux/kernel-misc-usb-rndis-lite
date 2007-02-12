@@ -12,7 +12,7 @@
 
 %define		_rel	0.7
 Summary:	Linux kernel drivers for USB RNDIS
-Summary(pl):	Sterowniki j±dra Linuksa do USB RNDIS
+Summary(pl.UTF-8):   Sterowniki jÄ…dra Linuksa do USB RNDIS
 Name:		kernel%{_alt_kernel}-misc-usb-rndis-lite
 Version:	0
 Release:	%{_rel}@%{_kernel_ver_str}
@@ -38,15 +38,15 @@ This package contains the Linux kernel drivers for:
 - USB network driver framework
 - USB CDC Ethernet devices
 
-%description -l pl
-Ten pakiet zawiera sterowniki j±dra Linuksa do:
+%description -l pl.UTF-8
+Ten pakiet zawiera sterowniki jÄ…dra Linuksa do:
 - RNDIS po stronie hosta USB
-- szkieletu sterowników sieciowych USB
-- urzêdzeñ ethernetowych USB CDC
+- szkieletu sterownikÃ³w sieciowych USB
+- urzÄ™dzeÅ„ ethernetowych USB CDC
 
 %package -n kernel%{_alt_kernel}-smp-misc-usb-rndis-lite
 Summary:	Linux SMP drivers for RNDIS
-Summary(pl):	Sterowniki j±dra Linuksa SMP do USB RNDIS
+Summary(pl.UTF-8):   Sterowniki jÄ…dra Linuksa SMP do USB RNDIS
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Base/Kernel
 Requires(post,postun):	/sbin/depmod
@@ -61,11 +61,11 @@ This package contains the Linux SMP kernel drivers for:
 - USB network driver framework
 - USB CDC Ethernet devices
 
-%description -n kernel%{_alt_kernel}-smp-misc-usb-rndis-lite -l pl
-Ten pakiet zawiera sterowniki j±dra Linuksa SMP do:
+%description -n kernel%{_alt_kernel}-smp-misc-usb-rndis-lite -l pl.UTF-8
+Ten pakiet zawiera sterowniki jÄ…dra Linuksa SMP do:
 - RNDIS po stronie hosta USB
-- szkieletu sterowników sieciowych USB
-- urzêdzeñ ethernetowych USB CDC
+- szkieletu sterownikÃ³w sieciowych USB
+- urzÄ™dzeÅ„ ethernetowych USB CDC
 
 %prep
 %setup -q -n usb-rndis-lite
